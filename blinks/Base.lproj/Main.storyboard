@@ -132,25 +132,8 @@
                                     <constraint firstItem="J0Y-Hd-PPL" firstAttribute="centerY" secondItem="ze0-bf-hbM" secondAttribute="centerY" id="niY-4r-sZG"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gC-SD-2jj">
-                                <rect key="frame" x="37" y="181" width="300" height="46"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Zc-MW-ksp">
-                                        <rect key="frame" x="14" y="15" width="272" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="0Zc-MW-ksp" firstAttribute="centerY" secondItem="2gC-SD-2jj" secondAttribute="centerY" id="8Ea-tD-Kd4"/>
-                                    <constraint firstAttribute="height" constant="46" id="AkL-v1-Xix"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Zc-MW-ksp" secondAttribute="trailing" constant="14" id="cvd-C6-Z6z"/>
-                                    <constraint firstItem="0Zc-MW-ksp" firstAttribute="leading" secondItem="2gC-SD-2jj" secondAttribute="leading" constant="14" id="khw-eU-bjq"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TT-DM-sKK">
-                                <rect key="frame" x="38" y="239" width="300" height="46"/>
+                                <rect key="frame" x="38" y="177" width="300" height="46"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qeo-cl-N6u">
                                         <rect key="frame" x="14" y="15" width="272" height="17"/>
@@ -167,7 +150,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaF-tu-2ma">
-                                <rect key="frame" x="38" y="293" width="300" height="46"/>
+                                <rect key="frame" x="38" y="231" width="300" height="46"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpj-in-mUX">
                                         <rect key="frame" x="14" y="15" width="272" height="17"/>
@@ -184,27 +167,24 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qku-R3-56C">
-                                <rect key="frame" x="38" y="385" width="300" height="46"/>
+                                <rect key="frame" x="38" y="323" width="300" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CREATE ACCOUNT"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2gC-SD-2jj" firstAttribute="centerX" secondItem="I1h-Q0-x9d" secondAttribute="centerX" id="5e0-HC-Cw0"/>
+                            <constraint firstItem="1TT-DM-sKK" firstAttribute="top" secondItem="ze0-bf-hbM" secondAttribute="bottom" constant="8" id="3gA-Wf-Hin"/>
                             <constraint firstItem="iaF-tu-2ma" firstAttribute="width" secondItem="1TT-DM-sKK" secondAttribute="width" id="Dc0-YU-XQr"/>
                             <constraint firstItem="Qku-R3-56C" firstAttribute="height" secondItem="iaF-tu-2ma" secondAttribute="height" id="Ebu-qP-fLU"/>
                             <constraint firstItem="Qku-R3-56C" firstAttribute="centerX" secondItem="I1h-Q0-x9d" secondAttribute="centerX" id="Fxn-fB-72q"/>
                             <constraint firstItem="iaF-tu-2ma" firstAttribute="centerX" secondItem="I1h-Q0-x9d" secondAttribute="centerX" id="G4H-CK-qEq"/>
                             <constraint firstItem="Qku-R3-56C" firstAttribute="width" secondItem="iaF-tu-2ma" secondAttribute="width" id="JsK-Su-xLl"/>
-                            <constraint firstItem="2gC-SD-2jj" firstAttribute="width" secondItem="ze0-bf-hbM" secondAttribute="width" id="O5Z-jj-Eu9"/>
                             <constraint firstItem="ze0-bf-hbM" firstAttribute="centerX" secondItem="I1h-Q0-x9d" secondAttribute="centerX" id="QbB-UB-uN6"/>
+                            <constraint firstItem="1TT-DM-sKK" firstAttribute="width" secondItem="ze0-bf-hbM" secondAttribute="width" id="agi-7R-yJo"/>
                             <constraint firstItem="Qku-R3-56C" firstAttribute="top" secondItem="iaF-tu-2ma" secondAttribute="bottom" constant="46" id="dpN-X7-O0h"/>
                             <constraint firstItem="iaF-tu-2ma" firstAttribute="top" secondItem="1TT-DM-sKK" secondAttribute="bottom" constant="8" id="goI-u6-0jh"/>
-                            <constraint firstItem="2gC-SD-2jj" firstAttribute="top" secondItem="ze0-bf-hbM" secondAttribute="bottom" constant="12" id="kJO-Pt-cwA"/>
-                            <constraint firstItem="1TT-DM-sKK" firstAttribute="width" secondItem="2gC-SD-2jj" secondAttribute="width" id="lYq-IP-Jmg"/>
                             <constraint firstItem="1TT-DM-sKK" firstAttribute="centerX" secondItem="I1h-Q0-x9d" secondAttribute="centerX" id="mau-rE-BOF"/>
-                            <constraint firstItem="1TT-DM-sKK" firstAttribute="top" secondItem="2gC-SD-2jj" secondAttribute="bottom" constant="12" id="t4T-lN-UkY"/>
                             <constraint firstItem="ze0-bf-hbM" firstAttribute="top" secondItem="bUL-pe-TaW" secondAttribute="bottom" constant="59" id="vkq-zg-V7f"/>
                             <constraint firstItem="ze0-bf-hbM" firstAttribute="width" secondItem="I1h-Q0-x9d" secondAttribute="width" multiplier="0.8" id="yJv-pj-orh"/>
                         </constraints>
