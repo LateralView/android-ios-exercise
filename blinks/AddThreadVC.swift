@@ -32,7 +32,7 @@ class AddThreadVC: UITableViewController
             let thread = Thread(URL: URL, title: title, username: username)
             BlinksSDK.instance.comments.createThread(thread) { (success) in
                 if success {
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    self.navigationController?.popViewControllerAnimated(true)
                 }
             }
         }

@@ -25,6 +25,12 @@ class ThreadListVC: UITableViewController
         
     }
     
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(true)
+        self.tableView.reloadData()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "toWebContent"
