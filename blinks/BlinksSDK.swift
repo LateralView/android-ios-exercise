@@ -12,6 +12,8 @@ class BlinksSDK
 {
     static let instance         = BlinksSDK()
     static let defaultBaseURL   = "http://localhost:3000"
+    
+    let auth                    = BlinksAuthSDK()
     let comments                = BlinksCommentsSDK()
     
     var currentUser: User?

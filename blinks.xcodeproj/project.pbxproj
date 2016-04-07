@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4E6F75376AC7794D7113498F /* Pods_blinksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24897CFD60E45869276952A /* Pods_blinksTests.framework */; };
 		834BB2B51CB44B7800E7A923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB2B41CB44B7800E7A923 /* AppDelegate.swift */; };
-		834BB2B71CB44B7800E7A923 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB2B61CB44B7800E7A923 /* ViewController.swift */; };
 		834BB2BA1CB44B7800E7A923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834BB2B81CB44B7800E7A923 /* Main.storyboard */; };
 		834BB2BC1CB44B7800E7A923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834BB2BB1CB44B7800E7A923 /* Assets.xcassets */; };
 		834BB2BF1CB44B7800E7A923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834BB2BD1CB44B7800E7A923 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,9 @@
 		834BB2EF1CB57D3800E7A923 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB2EE1CB57D3800E7A923 /* ThreadCell.swift */; };
 		83798FE51CB69FC900D4C663 /* WebContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FE41CB69FC900D4C663 /* WebContentVC.swift */; };
 		83798FE71CB6EFE100D4C663 /* AddThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FE61CB6EFE100D4C663 /* AddThreadVC.swift */; };
+		83798FEB1CB7083000D4C663 /* BlinksAuthSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FEA1CB7083000D4C663 /* BlinksAuthSDK.swift */; };
+		83798FEE1CB709C600D4C663 /* User-SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FED1CB709C600D4C663 /* User-SDK.swift */; };
+		83798FF11CB70AF700D4C663 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FF01CB70AF700D4C663 /* SignInVC.swift */; };
 		8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390E5CF1CB57FE5008DBB0B /* ThreadListVC.swift */; };
 		8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */; };
 		C381B02ADB4210D750DAE8CE /* Pods_blinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B46C367A050387800F9D5B1 /* Pods_blinks.framework */; };
@@ -50,7 +52,6 @@
 		3AB6B0303F30A67654A323D8 /* Pods-blinksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blinksTests/Pods-blinksTests.release.xcconfig"; sourceTree = "<group>"; };
 		834BB2B11CB44B7800E7A923 /* blinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834BB2B41CB44B7800E7A923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		834BB2B61CB44B7800E7A923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		834BB2B91CB44B7800E7A923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		834BB2BB1CB44B7800E7A923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		834BB2BE1CB44B7800E7A923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +70,9 @@
 		834BB2EE1CB57D3800E7A923 /* ThreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		83798FE41CB69FC900D4C663 /* WebContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebContentVC.swift; sourceTree = "<group>"; };
 		83798FE61CB6EFE100D4C663 /* AddThreadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddThreadVC.swift; sourceTree = "<group>"; };
+		83798FEA1CB7083000D4C663 /* BlinksAuthSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinksAuthSDK.swift; sourceTree = "<group>"; };
+		83798FED1CB709C600D4C663 /* User-SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User-SDK.swift"; sourceTree = "<group>"; };
+		83798FF01CB70AF700D4C663 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		8390E5CF1CB57FE5008DBB0B /* ThreadListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadListVC.swift; sourceTree = "<group>"; };
 		8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread-SDK.swift"; sourceTree = "<group>"; };
 		89CC63786CC3732450B09BDB /* Pods-blinks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinks.release.xcconfig"; path = "Pods/Target Support Files/Pods-blinks/Pods-blinks.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +146,6 @@
 				83798FE91CB6EFF800D4C663 /* View Controllers */,
 				834BB2E21CB57A1700E7A923 /* Model */,
 				834BB2B41CB44B7800E7A923 /* AppDelegate.swift */,
-				834BB2B61CB44B7800E7A923 /* ViewController.swift */,
 				834BB2B81CB44B7800E7A923 /* Main.storyboard */,
 				834BB2BB1CB44B7800E7A923 /* Assets.xcassets */,
 				834BB2BD1CB44B7800E7A923 /* LaunchScreen.storyboard */,
@@ -182,9 +185,10 @@
 		834BB2E91CB57BB800E7A923 /* BlinksSDK */ = {
 			isa = PBXGroup;
 			children = (
+				83798FEA1CB7083000D4C663 /* BlinksAuthSDK.swift */,
 				834BB2EA1CB57BCD00E7A923 /* BlinksCommentsSDK.swift */,
 				834BB2EB1CB57BCD00E7A923 /* BlinksSDK.swift */,
-				8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */,
+				83798FEC1CB709B700D4C663 /* Adapters */,
 			);
 			name = BlinksSDK;
 			sourceTree = "<group>";
@@ -208,11 +212,29 @@
 		83798FE91CB6EFF800D4C663 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				83798FEF1CB70AEA00D4C663 /* SignIn */,
 				83798FE31CB69FB500D4C663 /* WebContent */,
 				8390E5CE1CB57FB9008DBB0B /* ThreadList */,
 				83798FE81CB6EFE500D4C663 /* AddThread */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		83798FEC1CB709B700D4C663 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */,
+				83798FED1CB709C600D4C663 /* User-SDK.swift */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		83798FEF1CB70AEA00D4C663 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				83798FF01CB70AF700D4C663 /* SignInVC.swift */,
+			);
+			name = SignIn;
 			sourceTree = "<group>";
 		};
 		8390E5CE1CB57FB9008DBB0B /* ThreadList */ = {
@@ -465,10 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				834BB2B71CB44B7800E7A923 /* ViewController.swift in Sources */,
 				834BB2E61CB57A2500E7A923 /* Comment.swift in Sources */,
 				834BB2B51CB44B7800E7A923 /* AppDelegate.swift in Sources */,
+				83798FEE1CB709C600D4C663 /* User-SDK.swift in Sources */,
 				834BB2EF1CB57D3800E7A923 /* ThreadCell.swift in Sources */,
+				83798FEB1CB7083000D4C663 /* BlinksAuthSDK.swift in Sources */,
 				834BB2EC1CB57BCD00E7A923 /* BlinksCommentsSDK.swift in Sources */,
 				834BB2E81CB57A2500E7A923 /* User.swift in Sources */,
 				834BB2ED1CB57BCD00E7A923 /* BlinksSDK.swift in Sources */,
@@ -477,6 +500,7 @@
 				8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */,
 				83798FE71CB6EFE100D4C663 /* AddThreadVC.swift in Sources */,
 				8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */,
+				83798FF11CB70AF700D4C663 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

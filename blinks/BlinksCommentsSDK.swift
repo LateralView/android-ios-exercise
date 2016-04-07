@@ -40,4 +40,24 @@ class BlinksCommentsSDK {
         }
     }
     
+    func createThread(thread: Thread, handler:(success: Bool) -> Void )
+    {
+        let URLString = "\(BlinksSDK.baseURL())/threads"
+        let arguments = thread.serialize()
+        let request = Alamofire.request(.POST,
+                                        URLString,
+                                        parameters: arguments,
+                                        encoding: .JSON,
+                                        headers: nil)
+        request.responseJSON { (response) -> Void in
+            
+            if response.response?.statusCode == 201
+            {
+                handler(success: true)
+            } else {
+                handler(success: false)
+            }
+        }
+    }
+    
 }
