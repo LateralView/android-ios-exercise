@@ -20,12 +20,13 @@ private struct Keys {
 extension Thread
 {
     
+    static private let dateFormat = "yyyy-MM-dd'T'HH:mm:ss'T'ZZZ"
+    
     static func deserialize(dictionary: [String: AnyObject]) -> Thread?
     {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'T'ZZZ"
+        dateFormatter.dateFormat = self.dateFormat
         guard
-            let id = dictionary[Keys.id] as! String?,
             let urlString = dictionary[Keys.url] as! String?,
             let URL = NSURL(string: urlString),
             let title = dictionary[Keys.title] as! String?,
@@ -37,13 +38,33 @@ extension Thread
             return nil
         }
 
-        return Thread(id: id,
-                      URL: URL,
-                      title: title,
-                      createdAt: createdAt,
-                      username: username,
-                      commentCount: commentCount
-        )
+        let thread = Thread(URL: URL,
+                            title: title,
+                            username: username)
+        thread.createdAt = createdAt
+        thread.commentCount = commentCount
+        
+        if let id = dictionary[Keys.id] as! String? {
+            thread.id = id
+        }
+        
+        return thread
+    }
+    
+    func serialize() -> [String: AnyObject]
+    {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = Thread.dateFormat
+        var result = [String: AnyObject]()
+        if let id = self.id {
+            result[Keys.id] = id
+        }
+        result[Keys.url] = self.URL.absoluteString
+        result[Keys.title] = self.title
+        result[Keys.createdAt] = dateFormatter.stringFromDate(self.createdAt)
+        result[Keys.userName] = self.username
+        result[Keys.commentCount] = self.commentCount
+        return result
     }
     
 }

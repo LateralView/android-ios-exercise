@@ -7,6 +7,14 @@
       "created_at": "2016-03-29T17:07:23T-0300",
       "comment_count": 4,
       "username": "john_carter_of_mars"
+    },
+    {
+      "title": "Sarasa ",
+      "created_at": "2016-04-07T18:58:53T-0300",
+      "comment_count": 0,
+      "url": "www.yahoo.com",
+      "username": "testme",
+      "id": "2cc85087-673f-4cef-8120-b4ac9c6b0c76"
     }
   ],
   "comments": [
@@ -44,6 +52,12 @@
     }
   ],
   "users": [
+    {
+      "username": "testme",
+      "password_hash": "sadkasjd",
+      "password_seed": 231,
+      "created_at": "2012-02-15T10:33:15T-0300"
+    },
     {
       "username": "silly_name",
       "password_hash": "laksjdklsadj",

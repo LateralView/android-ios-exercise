@@ -12,6 +12,7 @@ class User
 {
     
     let username        : String
+    var createdAt       : NSDate!
     var passwordHash    : String?
     var passwordSeed    : String?
     

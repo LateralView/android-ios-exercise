@@ -11,26 +11,22 @@ import Foundation
 class Thread
 {
     
-    let id              : String
-    let URL             : NSURL
-    let title           : String
-    let createdAt       : NSDate
-    let username        : String
-    let commentCount    : Int
+    var id              : String?
+    var URL             : NSURL
+    var title           : String
+    var createdAt       : NSDate
+    var username        : String
+    var commentCount    : Int
     
-    init(id: String,
-         URL: NSURL,
+    init(URL: NSURL,
          title: String,
-         createdAt: NSDate,
-         username: String,
-         commentCount: Int)
+         username: String)
     {
-        self.id = id
         self.URL = URL
         self.title = title
-        self.createdAt = createdAt
+        self.createdAt = NSDate()
         self.username = username
-        self.commentCount = commentCount
+        self.commentCount = 0
     }
     
 }
