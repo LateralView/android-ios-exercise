@@ -10,16 +10,28 @@ import Foundation
 
 class BlinksSDK
 {
-    static let baseURL    = "http://localhost:3000/"
-    static let instance   = BlinksSDK()
-    
-    let comments             = BlinksCommentsSDK()
+    static let instance         = BlinksSDK()
+    static let defaultBaseURL   = "http://localhost:3000"
+    let comments                = BlinksCommentsSDK()
     
     var currentUser: User?
-    var isLoggedIn: Bool {
+    var isLoggedIn: Bool
+    {
         return currentUser != nil
     }
     
-    private init() {
+    private init()
+    {
     }
+
+    static func baseURL() -> String
+    {
+        let env = NSProcessInfo.processInfo().environment
+        if let url = env["BlinksHost"] {
+            return url
+        } else {
+            return defaultBaseURL
+        }
+    }
+    
 }

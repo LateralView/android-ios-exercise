@@ -11,15 +11,23 @@ import Foundation
 class Thread
 {
     
-    let id      : String
-    let url     : String
-    let title   : String
+    let id          : String
+    let url         : String
+    let title       : String
+    let createdAt   : String
+    let username    : String
     
-    init(id: String, url: String, title: String)
+    init(id: String,
+         url: String,
+         title: String,
+         createdAt: String,
+         username: String)
     {
         self.id = id
         self.url = url
         self.title = title
+        self.createdAt = createdAt
+        self.username = username
     }
     
 }
