@@ -22,6 +22,7 @@
 		834BB2ED1CB57BCD00E7A923 /* BlinksSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB2EB1CB57BCD00E7A923 /* BlinksSDK.swift */; };
 		834BB2EF1CB57D3800E7A923 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB2EE1CB57D3800E7A923 /* ThreadCell.swift */; };
 		83798FE51CB69FC900D4C663 /* WebContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FE41CB69FC900D4C663 /* WebContentVC.swift */; };
+		83798FE71CB6EFE100D4C663 /* AddThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FE61CB6EFE100D4C663 /* AddThreadVC.swift */; };
 		8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390E5CF1CB57FE5008DBB0B /* ThreadListVC.swift */; };
 		8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */; };
 		C381B02ADB4210D750DAE8CE /* Pods_blinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B46C367A050387800F9D5B1 /* Pods_blinks.framework */; };
@@ -67,6 +68,7 @@
 		834BB2EB1CB57BCD00E7A923 /* BlinksSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinksSDK.swift; sourceTree = "<group>"; };
 		834BB2EE1CB57D3800E7A923 /* ThreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 		83798FE41CB69FC900D4C663 /* WebContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebContentVC.swift; sourceTree = "<group>"; };
+		83798FE61CB6EFE100D4C663 /* AddThreadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddThreadVC.swift; sourceTree = "<group>"; };
 		8390E5CF1CB57FE5008DBB0B /* ThreadListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadListVC.swift; sourceTree = "<group>"; };
 		8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread-SDK.swift"; sourceTree = "<group>"; };
 		89CC63786CC3732450B09BDB /* Pods-blinks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinks.release.xcconfig"; path = "Pods/Target Support Files/Pods-blinks/Pods-blinks.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,9 +138,8 @@
 		834BB2B31CB44B7800E7A923 /* blinks */ = {
 			isa = PBXGroup;
 			children = (
-				83798FE31CB69FB500D4C663 /* WebContent */,
-				8390E5CE1CB57FB9008DBB0B /* ThreadList */,
 				834BB2E91CB57BB800E7A923 /* BlinksSDK */,
+				83798FE91CB6EFF800D4C663 /* View Controllers */,
 				834BB2E21CB57A1700E7A923 /* Model */,
 				834BB2B41CB44B7800E7A923 /* AppDelegate.swift */,
 				834BB2B61CB44B7800E7A923 /* ViewController.swift */,
@@ -194,6 +195,24 @@
 				83798FE41CB69FC900D4C663 /* WebContentVC.swift */,
 			);
 			name = WebContent;
+			sourceTree = "<group>";
+		};
+		83798FE81CB6EFE500D4C663 /* AddThread */ = {
+			isa = PBXGroup;
+			children = (
+				83798FE61CB6EFE100D4C663 /* AddThreadVC.swift */,
+			);
+			name = AddThread;
+			sourceTree = "<group>";
+		};
+		83798FE91CB6EFF800D4C663 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83798FE31CB69FB500D4C663 /* WebContent */,
+				8390E5CE1CB57FB9008DBB0B /* ThreadList */,
+				83798FE81CB6EFE500D4C663 /* AddThread */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		8390E5CE1CB57FB9008DBB0B /* ThreadList */ = {
@@ -456,6 +475,7 @@
 				83798FE51CB69FC900D4C663 /* WebContentVC.swift in Sources */,
 				834BB2E71CB57A2500E7A923 /* Thread.swift in Sources */,
 				8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */,
+				83798FE71CB6EFE100D4C663 /* AddThreadVC.swift in Sources */,
 				8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
