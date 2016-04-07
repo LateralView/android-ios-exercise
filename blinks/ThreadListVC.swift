@@ -25,6 +25,19 @@ class ThreadListVC: UITableViewController
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "toWebContent"
+        {
+            if let indexPath = self.tableView.indexPathForSelectedRow
+            {
+                let thread = self.threads[indexPath.row]
+                let vc = segue.destinationViewController as! WebContentVC
+                vc.thread = thread
+            }
+        }
+    }
+    
     // MARK: UITableViewDataSource protocol
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

@@ -10,11 +10,11 @@ import UIKit
 
 class ThreadCell: UITableViewCell
 {
-    @IBOutlet var title: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var commentCount: UILabel!
-    @IBOutlet weak var commentText: UILabel!
+    @IBOutlet var title                 : UILabel!
+    @IBOutlet weak var userImage        : UIImageView!
+    @IBOutlet weak var userName         : UILabel!
+    @IBOutlet weak var commentCount     : UILabel!
+    @IBOutlet weak var commentText      : UILabel!
     
     var thread: Thread!
     {
@@ -22,6 +22,7 @@ class ThreadCell: UITableViewCell
         {
             self.title.text = thread.title
             self.userName.text = thread.username
+            self.commentCount.text = "\(thread.commentCount)"
         }
     }
     
