@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-blinks/Alamofire.framework"
+  install_framework "Pods-blinks/CryptoSwift.framework"
   install_framework "Pods-blinks/swift_lateral_toolbox.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-blinks/Alamofire.framework"
+  install_framework "Pods-blinks/CryptoSwift.framework"
   install_framework "Pods-blinks/swift_lateral_toolbox.framework"
 fi

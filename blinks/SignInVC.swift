@@ -14,6 +14,12 @@ class SignInVC: UIViewController
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignUpVC.dismissKeyboard)))
+    }
+    
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -22,6 +28,13 @@ class SignInVC: UIViewController
             self.performSegueWithIdentifier("toThreadList", sender: self)
         }
     }
+
+    func dismissKeyboard()
+    {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: IBActions
     
     @IBAction func doSignIn(sender: AnyObject)
     {

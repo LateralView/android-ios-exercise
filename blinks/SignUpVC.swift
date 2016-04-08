@@ -14,6 +14,19 @@ class SignUpVC: UIViewController
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignUpVC.dismissKeyboard)))
+    }
+    
+    func dismissKeyboard()
+    {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: IBActions
+    
     @IBAction func doSignUp(sender: AnyObject)
     {
         if let validationError = self.validate()
@@ -32,12 +45,18 @@ class SignUpVC: UIViewController
         BlinksSDK.instance.auth.signUp(user) { (success) in
             
             if success {
-                self.navigationController?.popViewControllerAnimated(false)
+                self.dismissViewControllerAnimated(false, completion: nil)
             }
         }
         
-        
     }
+    
+    @IBAction func doCancel(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: Private
     
     private func validate() -> String?
     {

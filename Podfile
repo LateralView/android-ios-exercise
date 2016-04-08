@@ -6,6 +6,7 @@ use_frameworks!
 target 'blinks' do
 	pod 'Alamofire'
     pod 'swift-lateral-toolbox', :git => 'https://github.com/LateralView/swift-lateral-toolbox.git'
+    pod 'CryptoSwift'
 end
 
 target 'blinksTests' do
