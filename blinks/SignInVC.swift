@@ -14,6 +14,15 @@ class SignInVC: UIViewController
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        if BlinksSDK.instance.isLoggedIn
+        {
+            self.performSegueWithIdentifier("toThreadList", sender: self)
+        }
+    }
+    
     @IBAction func doSignIn(sender: AnyObject)
     {
         BlinksSDK.instance.auth.authenticate(userName.text!,

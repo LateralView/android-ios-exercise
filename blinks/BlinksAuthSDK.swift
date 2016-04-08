@@ -11,7 +11,7 @@ import Alamofire
 
 class BlinksAuthSDK {
     
-    func authenticate(username: String, password: String, handler:(user: User?) -> Void )
+    func authenticate(username: String, password: String, handler:(user: User?) -> Void)
     {
         let URLString = "\(BlinksSDK.baseURL())/users"
         let arguments = [
@@ -27,7 +27,8 @@ class BlinksAuthSDK {
             if let result = response.result.value as! [[String: AnyObject]]?,
                 let first = result.first,
                 let user = User.deserialize(first)
-                where response.response?.statusCode == 200
+                where (response.response?.statusCode == 200)
+                    && user.isPasswordEqual(password)
             {
                 BlinksSDK.instance.currentUser = user
                 handler(user: user)
@@ -35,6 +36,27 @@ class BlinksAuthSDK {
                 handler(user: nil)
             }
 
+        }
+    }
+    
+    func signUp(user: User, handler:(success: Bool) -> Void)
+    {
+        let URLString = "\(BlinksSDK.baseURL())/users"
+        let arguments = user.serialize()
+        let request = Alamofire.request(.POST,
+                                        URLString,
+                                        parameters: arguments,
+                                        encoding: .JSON,
+                                        headers: nil)
+        request.responseJSON { (response) -> Void in
+            
+            if response.response?.statusCode == 201
+            {
+                BlinksSDK.instance.currentUser = user
+                handler(success: true)
+            } else {
+                handler(success: false)
+            }
         }
     }
     

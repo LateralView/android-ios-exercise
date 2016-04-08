@@ -27,6 +27,7 @@
 		83798FF11CB70AF700D4C663 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83798FF01CB70AF700D4C663 /* SignInVC.swift */; };
 		8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390E5CF1CB57FE5008DBB0B /* ThreadListVC.swift */; };
 		8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */; };
+		83D1EE271CB7ED5F00BD0265 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1EE261CB7ED5F00BD0265 /* SignUpVC.swift */; };
 		C381B02ADB4210D750DAE8CE /* Pods_blinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B46C367A050387800F9D5B1 /* Pods_blinks.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		83798FF01CB70AF700D4C663 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		8390E5CF1CB57FE5008DBB0B /* ThreadListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadListVC.swift; sourceTree = "<group>"; };
 		8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread-SDK.swift"; sourceTree = "<group>"; };
+		83D1EE261CB7ED5F00BD0265 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		89CC63786CC3732450B09BDB /* Pods-blinks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinks.release.xcconfig"; path = "Pods/Target Support Files/Pods-blinks/Pods-blinks.release.xcconfig"; sourceTree = "<group>"; };
 		8D75346EE6B238D7089A6F1F /* Pods-blinks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blinks/Pods-blinks.debug.xcconfig"; sourceTree = "<group>"; };
 		9B46C367A050387800F9D5B1 /* Pods_blinks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blinks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 		83798FE91CB6EFF800D4C663 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				83D1EE251CB7ED4C00BD0265 /* SignUp */,
 				83798FEF1CB70AEA00D4C663 /* SignIn */,
 				83798FE31CB69FB500D4C663 /* WebContent */,
 				8390E5CE1CB57FB9008DBB0B /* ThreadList */,
@@ -244,6 +247,14 @@
 				834BB2EE1CB57D3800E7A923 /* ThreadCell.swift */,
 			);
 			name = ThreadList;
+			sourceTree = "<group>";
+		};
+		83D1EE251CB7ED4C00BD0265 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				83D1EE261CB7ED5F00BD0265 /* SignUpVC.swift */,
+			);
+			name = SignUp;
 			sourceTree = "<group>";
 		};
 		C0ABC0329F81D03C3A13E16A /* Pods */ = {
@@ -500,6 +511,7 @@
 				8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */,
 				83798FE71CB6EFE100D4C663 /* AddThreadVC.swift in Sources */,
 				8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */,
+				83D1EE271CB7ED5F00BD0265 /* SignUpVC.swift in Sources */,
 				83798FF11CB70AF700D4C663 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
