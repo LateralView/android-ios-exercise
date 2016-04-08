@@ -15,6 +15,30 @@
       "url": "www.yahoo.com",
       "username": "testme",
       "id": "2cc85087-673f-4cef-8120-b4ac9c6b0c76"
+    },
+    {
+      "title": "DAE browses Reddit at work?",
+      "created_at": "2016-04-07T19:19:26T-0300",
+      "comment_count": 0,
+      "url": "http://www.reddit.com",
+      "username": "testme",
+      "id": "36633d64-7ada-43b3-b0c1-476324dd88d2"
+    },
+    {
+      "title": "DAE browses Reddit at work?",
+      "created_at": "2016-04-07T19:20:11T-0300",
+      "comment_count": 0,
+      "url": "http://www.reddit.com",
+      "username": "testme",
+      "id": "e47efe5f-a595-44cb-a390-622d217cb372"
+    },
+    {
+      "title": "TIL there's a huge online library containing a copy of millions of websites. They even added video games to the collection!",
+      "created_at": "2016-04-07T19:23:20T-0300",
+      "comment_count": 0,
+      "url": "http://www.archive.org",
+      "username": "testme",
+      "id": "afb04041-ac9d-4a5a-bdf2-2da1e14d7d9b"
     }
   ],
   "comments": [
@@ -75,6 +99,20 @@
       "password_hash": "sdkjdsfkljd",
       "password_seed": 23411,
       "created_at": "2016-02-15T10:33:15T-0300"
+    },
+    {
+      "username": "leandro",
+      "created_at": "2016-04-08T11:51:53T-0300",
+      "password_seed": 0,
+      "password_hash": "qwerty",
+      "id": "438d46ee-2a4c-4a69-8e87-45b7cafbf08a"
+    },
+    {
+      "username": "user",
+      "created_at": "2016-04-08T14:46:51T-0300",
+      "password_seed": 1955577593,
+      "password_hash": "6b9bce1b6fb0b7b7f0ff7afaaf7b160b4cfdd72a104c20f221587941cb4de9d1",
+      "id": "eee08521-b0c1-47ef-a59d-70e645f43675"
     }
   ]
 }

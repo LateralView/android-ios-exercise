@@ -26,17 +26,32 @@ extension User
         dateFormatter.dateFormat = self.dateFormat
         guard
             let username = dictionary[Keys.userName] as! String?,
+            let passwordHash = dictionary[Keys.passwordHash] as! String?,
+            let passwordSeed = dictionary[Keys.passwordSeed] as! Int?,
             let createdAtText = dictionary[Keys.createdAt] as! String?,
             let createdAt = dateFormatter.dateFromString(createdAtText)
         else {
             return nil
         }
         
-        let user = User(username: username)
+        let user = User(username: username,
+                        passwordHash: passwordHash,
+                        passwordSeed: passwordSeed)
         user.createdAt = createdAt
         
         return user
     }
     
+    func serialize() -> [String: AnyObject]
+    {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = User.dateFormat
+        var result = [String: AnyObject]()
+        result[Keys.userName] = self.username
+        result[Keys.passwordHash] = self.passwordHash
+        result[Keys.passwordSeed] = self.passwordSeed
+        result[Keys.createdAt] = dateFormatter.stringFromDate(self.createdAt)
+        return result
+    }
     
 }
