@@ -365,6 +365,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Blinks" id="D1A-Fq-qfG">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="7Qy-RP-hUc">
+                            <connections>
+                                <action selector="doSignOut:" destination="auN-vQ-kMe" id="m20-lN-J1R"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ALW-Mm-pvv">
                             <connections>
                                 <segue destination="sZk-fU-GU0" kind="show" id="DMI-du-9de"/>
@@ -476,7 +481,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThreadCell" rowHeight="114" id="yb5-j2-Lxe" customClass="ThreadCell" customModule="blinks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="114"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yb5-j2-Lxe" id="T30-fO-jcS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
@@ -540,7 +545,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="114" id="oSz-Fh-d8H" customClass="CommentCell" customModule="blinks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="142" width="375" height="114"/>
+                                        <rect key="frame" x="0.0" y="206" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oSz-Fh-d8H" id="c13-AH-Nmy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
@@ -811,7 +816,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="6Jd-Sh-28j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                    <rect key="frame" x="0.0" y="64" width="375" height="146"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OLI-EO-Oyv">
@@ -888,7 +893,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThreadCell" id="INR-ys-UNz" customClass="ThreadCell" customModule="blinks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="174" width="375" height="64"/>
+                                        <rect key="frame" x="0.0" y="238" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="INR-ys-UNz" id="2Ls-Xd-b1Y">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
@@ -924,7 +929,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="NTy-Gd-oD7" customClass="CommentCell" customModule="blinks" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="238" width="375" height="64"/>
+                                        <rect key="frame" x="0.0" y="302" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NTy-Gd-oD7" id="fux-ge-O7A">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
@@ -990,7 +995,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cf5-XX-vTR"/>
-        <segue reference="QCo-lx-7eq"/>
+        <segue reference="vTo-TY-abs"/>
+        <segue reference="aXx-bm-yau"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -69,6 +69,12 @@ class ThreadListVC: UITableViewController
     
     // MARK: IBActions
     
+    @IBAction func doSignOut(sender: AnyObject)
+    {
+        BlinksSDK.instance.currentUser = nil
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: UITableViewDataSource protocol
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
