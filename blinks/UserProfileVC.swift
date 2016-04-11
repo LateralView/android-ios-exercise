@@ -42,6 +42,18 @@ class UserProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.loadContent()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "toComments"
+        {
+            let cell = sender as! ThreadCell
+            let vc = segue.destinationViewController as! CommentsVC
+            vc.thread = cell.thread
+        }
+    }
+    
+    // MARK: Private
+    
     private func loadUserData()
     {
         self.userName.text = ""
