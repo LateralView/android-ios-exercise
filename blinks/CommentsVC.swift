@@ -14,13 +14,14 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet var sectionHeader: UIView!
     
     var thread      : Thread!
-    var comments    = [Comment]()
+    
+    private var comments    = [Comment]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        BlinksSDK.instance.comments.findComments(thread) { (comments) in
+        BlinksSDK.instance.comments.find(thread) { (comments) in
             
             if let uComments = comments
             {
@@ -29,6 +30,33 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "toUserProfileFromThread"
+        {
+            var cell = sender as! UIView
+            while !cell.isKindOfClass(ThreadCell)
+            {
+                cell = cell.superview!
+            }
+            let senderCell = cell as! ThreadCell
+            let vc = segue.destinationViewController as! UserProfileVC
+            vc.username = senderCell.thread.username
+        }
+        else if segue.identifier == "toUserProfileFromComment"
+        {
+            var cell = sender as! UIView
+            while !cell.isKindOfClass(CommentCell)
+            {
+                cell = cell.superview!
+            }
+            let senderCell = cell as! CommentCell
+            let vc = segue.destinationViewController as! UserProfileVC
+            vc.username = senderCell.comment.username
+        }
+
     }
     
     // MARK: UITableViewDataSource

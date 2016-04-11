@@ -13,6 +13,8 @@ private struct Keys {
     static let passwordHash     = "password_hash"
     static let passwordSeed     = "password_seed"
     static let createdAt        = "created_at"
+    static let postCount        = "post_count"
+    static let commentCount     = "comment_count"
 }
 
 extension User
@@ -29,6 +31,8 @@ extension User
             let passwordHash = dictionary[Keys.passwordHash] as! String?,
             let passwordSeed = dictionary[Keys.passwordSeed] as! Int?,
             let createdAtText = dictionary[Keys.createdAt] as! String?,
+            let postCount = dictionary[Keys.postCount] as! Int?,
+            let commentCount = dictionary[Keys.commentCount] as! Int?,
             let createdAt = dateFormatter.dateFromString(createdAtText)
         else {
             return nil
@@ -38,7 +42,8 @@ extension User
                         passwordHash: passwordHash,
                         passwordSeed: passwordSeed)
         user.createdAt = createdAt
-        
+        user.postCount = postCount
+        user.commentCount = commentCount
         return user
     }
     
@@ -51,6 +56,8 @@ extension User
         result[Keys.passwordHash] = self.passwordHash
         result[Keys.passwordSeed] = self.passwordSeed
         result[Keys.createdAt] = dateFormatter.stringFromDate(self.createdAt)
+        result[Keys.postCount] = self.postCount
+        result[Keys.commentCount] = self.commentCount
         return result
     }
     

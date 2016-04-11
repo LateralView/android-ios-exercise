@@ -16,7 +16,7 @@ class ThreadListVC: UITableViewController
     {
         super.viewDidLoad()
         
-        BlinksSDK.instance.comments.findAllThreads { (threads) in
+        BlinksSDK.instance.threads.find { (threads) in
             if let uThreads = threads {
                 self.threads = uThreads
                 self.tableView.reloadData()
@@ -49,9 +49,20 @@ class ThreadListVC: UITableViewController
             {
                 cell = cell.superview!
             }
-            let selectedThread = cell as! ThreadCell
+            let senderCell = cell as! ThreadCell
             let vc = segue.destinationViewController as! CommentsVC
-            vc.thread = selectedThread.thread
+            vc.thread = senderCell.thread
+        }
+        else if segue.identifier == "toUserProfile"
+        {
+            var cell = sender as! UIView
+            while !cell.isKindOfClass(ThreadCell)
+            {
+                cell = cell.superview!
+            }
+            let senderCell = cell as! ThreadCell
+            let vc = segue.destinationViewController as! UserProfileVC
+            vc.username = senderCell.thread.username
         }
         
     }

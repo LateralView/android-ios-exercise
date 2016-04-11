@@ -25,7 +25,7 @@
       "id": "36633d64-7ada-43b3-b0c1-476324dd88d2"
     },
     {
-      "title": "DAE browses Reddit at work?",
+      "title": "I'm bored. This site sure helps to keep me distracted. You should probably try it out! You can thank me later!",
       "created_at": "2016-04-07T19:20:11T-0300",
       "comment_count": 0,
       "url": "http://www.reddit.com",
@@ -80,24 +80,32 @@
       "username": "testme",
       "password_hash": "sadkasjd",
       "password_seed": 231,
+      "post_count": 3,
+      "comment_count": 123,
       "created_at": "2012-02-15T10:33:15T-0300"
     },
     {
       "username": "silly_name",
       "password_hash": "laksjdklsadj",
       "password_seed": 123,
+      "post_count": 2,
+      "comment_count": 12,
       "created_at": "2012-02-15T10:33:15T-0300"
     },
     {
       "username": "john_carter_of_mars",
       "password_hash": "fasaasdklsadj",
       "password_seed": 322212,
+      "post_count": 4,
+      "comment_count": 4,
       "created_at": "2010-09-19T10:33:15T-0300"
     },
     {
       "username": "trollface",
       "password_hash": "sdkjdsfkljd",
       "password_seed": 23411,
+      "post_count": 323,
+      "comment_count": 12312,
       "created_at": "2016-02-15T10:33:15T-0300"
     },
     {
@@ -105,6 +113,8 @@
       "created_at": "2016-04-08T11:51:53T-0300",
       "password_seed": 0,
       "password_hash": "qwerty",
+      "post_count": 53,
+      "comment_count": 21,
       "id": "438d46ee-2a4c-4a69-8e87-45b7cafbf08a"
     },
     {
@@ -112,6 +122,8 @@
       "created_at": "2016-04-08T14:46:51T-0300",
       "password_seed": 1955577593,
       "password_hash": "6b9bce1b6fb0b7b7f0ff7afaaf7b160b4cfdd72a104c20f221587941cb4de9d1",
+      "post_count": 1,
+      "comment_count": 1,
       "id": "eee08521-b0c1-47ef-a59d-70e645f43675"
     }
   ]

@@ -14,6 +14,8 @@ class User
     
     let username                        : String
     var createdAt                       : NSDate    = NSDate()
+    var postCount                       : Int       = 0
+    var commentCount                    : Int       = 0
 
     // The following passwordHash and passwordSeed properties would normally
     // be stored in the backend and they would be unknown to any client app.
