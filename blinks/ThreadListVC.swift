@@ -16,7 +16,7 @@ class ThreadListVC: UITableViewController
     {
         super.viewDidLoad()
         
-        BlinksSDK.instance.comments.findAllThreads { (threads) in
+        BlinksSDK.instance.threads.find { (threads) in
             if let uThreads = threads {
                 self.threads = uThreads
                 self.tableView.reloadData()

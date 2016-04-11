@@ -1,36 +1,28 @@
 //
-//  BlinksCommentsSDK.swift
+//  BlinksUsersSDK.swift
 //  blinks
 //
-//  Created by Leandro Tami on 3/30/16.
+//  Created by Leandro Tami on 4/11/16.
 //  Copyright © 2016 Lateral View. All rights reserved.
 //
 
 import Foundation
+
 import Alamofire
 
-class BlinksCommentsSDK
+class BlinksUsersSDK
 {
     
-    func find(thread: Thread? = nil,
-              parent: Comment? = nil,
-              username: String? = nil,
-              handler:(comments: [Comment]?) -> Void)
+    func find(username: String? = nil,
+              handler:(users: [User]?) -> Void)
     {
-        let URLString = "\(BlinksSDK.baseURL())/comments"
+        let URLString = "\(BlinksSDK.baseURL())/users"
         var arguments = [String: String]()
-        
-        if let threadId = thread?.id
-        {
-            arguments["thread"] = threadId
-        }
         
         if let uUserName = username
         {
             arguments["username"] = uUserName
         }
-        
-        arguments["parent"] = parent?.id ?? "none"
         
         let request = Alamofire.request(.GET,
                                         URLString,
@@ -42,18 +34,17 @@ class BlinksCommentsSDK
             if let result = response.result.value as! [[String: AnyObject]]?
                 where response.response?.statusCode == 200
             {
-                var comments = [Comment]()
+                var users = [User]()
                 for item in result {
-                    if let comment = Comment.deserialize(item) {
-                        comments.append(comment)
+                    if let user = User.deserialize(item) {
+                        users.append(user)
                     }
                 }
-                handler(comments: comments)
+                handler(users: users)
             } else {
-                handler(comments: nil)
+                handler(users: nil)
             }
         }
-        
     }
-
+    
 }

@@ -21,7 +21,7 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     {
         super.viewDidLoad()
         
-        BlinksSDK.instance.comments.findComments(thread) { (comments) in
+        BlinksSDK.instance.comments.find(thread) { (comments) in
             
             if let uComments = comments
             {

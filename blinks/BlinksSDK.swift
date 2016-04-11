@@ -14,6 +14,8 @@ class BlinksSDK
     static let defaultBaseURL   = "http://localhost:3000"
     
     let auth                    = BlinksAuthSDK()
+    let threads                 = BlinksThreadsSDK()
+    let users                   = BlinksUsersSDK()
     let comments                = BlinksCommentsSDK()
     
     var currentUser: User?

@@ -22,11 +22,18 @@ class UserProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var userComments: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
-    var thread          : Thread!
+    var username                : String!
     
     private var displayMode     : DisplayMode = .Posts
+    {
+        didSet
+        {
+            self.loadData()
+        }
+    }
+    
     private var comments        = [Comment]()
-    private var posts           = [Thread]()
+    private var threads         = [Thread]()
     
     override func viewDidLoad()
     {
@@ -35,21 +42,36 @@ class UserProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     private func loadData()
     {
+        self.comments = [Comment]()
+        self.threads = [Thread]()
+        self.tableView.reloadData()
+
         switch self.displayMode
         {
             
         case .Posts:
+         
+            BlinksSDK.instance.threads.find(username,
+                                            handler: { (threads) in
+                if let uThreads = threads
+                {
+                    self.threads = uThreads
+                    self.tableView.reloadData()
+                }
+            })
             
         case .Comments:
 
-            BlinksSDK.instance.comments.findComments(thread) { (comments) in
-                
+            BlinksSDK.instance.comments.find(nil,
+                                             username: username,
+                                             handler: { (comments) in
+                                                        
                 if let uComments = comments
                 {
                     self.comments = uComments
                     self.tableView.reloadData()
                 }
-            }
+            })
             
         }
     }
@@ -58,45 +80,43 @@ class UserProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBAction func doDisplayPosts(sender: AnyObject)
     {
+        self.displayMode = .Posts
     }
     
     @IBAction func doDisplayComments(sender: AnyObject)
     {
+        self.displayMode = .Comments
     }
 
     // MARK: UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
-    {
-        return 2
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if section == 0
+        switch self.displayMode
         {
-            return 1
-        }
-        else
-        {
+        case .Posts:
+            return self.threads.count
+            
+        case .Comments:
             return self.comments.count
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        
-        if indexPath.section == 0
+        switch self.displayMode
         {
+        case .Posts:
             let cell = tableView.dequeueReusableCellWithIdentifier("ThreadCell", forIndexPath: indexPath) as! ThreadCell
-            cell.thread = thread
+            cell.thread = self.threads[indexPath.row]
             return cell
-        } else {
+            
+        case .Comments:
             let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell", forIndexPath: indexPath) as! CommentCell
             cell.comment = self.comments[indexPath.row]
             return cell
+
         }
-        
     }
 
 }
