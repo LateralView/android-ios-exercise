@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E6F75376AC7794D7113498F /* Pods_blinksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24897CFD60E45869276952A /* Pods_blinksTests.framework */; };
+		833018AB1CB82AC4007F6E45 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833018AA1CB82AC4007F6E45 /* CommentsVC.swift */; };
+		83498EFC1CBBD93800B3AEAF /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83498EFB1CBBD93800B3AEAF /* CommentCell.swift */; };
+		83498EFE1CBBDBF400B3AEAF /* Comment-SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83498EFD1CBBDBF400B3AEAF /* Comment-SDK.swift */; };
 		834BB2B51CB44B7800E7A923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB2B41CB44B7800E7A923 /* AppDelegate.swift */; };
 		834BB2BA1CB44B7800E7A923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834BB2B81CB44B7800E7A923 /* Main.storyboard */; };
 		834BB2BC1CB44B7800E7A923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834BB2BB1CB44B7800E7A923 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		0E3527A42C0D5EC896F81681 /* Pods-blinksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blinksTests/Pods-blinksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AB6B0303F30A67654A323D8 /* Pods-blinksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blinksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-blinksTests/Pods-blinksTests.release.xcconfig"; sourceTree = "<group>"; };
+		833018AA1CB82AC4007F6E45 /* CommentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
+		83498EFB1CBBD93800B3AEAF /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		83498EFD1CBBDBF400B3AEAF /* Comment-SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment-SDK.swift"; sourceTree = "<group>"; };
 		834BB2B11CB44B7800E7A923 /* blinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834BB2B41CB44B7800E7A923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834BB2B91CB44B7800E7A923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +123,15 @@
 				F24897CFD60E45869276952A /* Pods_blinksTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		833018A91CB82AB7007F6E45 /* CommentsVC */ = {
+			isa = PBXGroup;
+			children = (
+				833018AA1CB82AC4007F6E45 /* CommentsVC.swift */,
+				83498EFB1CBBD93800B3AEAF /* CommentCell.swift */,
+			);
+			name = CommentsVC;
 			sourceTree = "<group>";
 		};
 		834BB2A81CB44B7800E7A923 = {
@@ -214,6 +229,7 @@
 		83798FE91CB6EFF800D4C663 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				833018A91CB82AB7007F6E45 /* CommentsVC */,
 				83D1EE251CB7ED4C00BD0265 /* SignUp */,
 				83798FEF1CB70AEA00D4C663 /* SignIn */,
 				83798FE31CB69FB500D4C663 /* WebContent */,
@@ -228,6 +244,7 @@
 			children = (
 				8390E5D11CB5AB0B008DBB0B /* Thread-SDK.swift */,
 				83798FED1CB709C600D4C663 /* User-SDK.swift */,
+				83498EFD1CBBDBF400B3AEAF /* Comment-SDK.swift */,
 			);
 			name = Adapters;
 			sourceTree = "<group>";
@@ -506,8 +523,11 @@
 				834BB2EC1CB57BCD00E7A923 /* BlinksCommentsSDK.swift in Sources */,
 				834BB2E81CB57A2500E7A923 /* User.swift in Sources */,
 				834BB2ED1CB57BCD00E7A923 /* BlinksSDK.swift in Sources */,
+				83498EFE1CBBDBF400B3AEAF /* Comment-SDK.swift in Sources */,
 				83798FE51CB69FC900D4C663 /* WebContentVC.swift in Sources */,
+				83498EFC1CBBD93800B3AEAF /* CommentCell.swift in Sources */,
 				834BB2E71CB57A2500E7A923 /* Thread.swift in Sources */,
+				833018AB1CB82AC4007F6E45 /* CommentsVC.swift in Sources */,
 				8390E5D21CB5AB0B008DBB0B /* Thread-SDK.swift in Sources */,
 				83798FE71CB6EFE100D4C663 /* AddThreadVC.swift in Sources */,
 				8390E5D01CB57FE5008DBB0B /* ThreadListVC.swift in Sources */,

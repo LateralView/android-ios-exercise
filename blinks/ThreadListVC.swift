@@ -42,7 +42,21 @@ class ThreadListVC: UITableViewController
                 vc.thread = thread
             }
         }
+        else if segue.identifier == "toComments"
+        {
+            var cell = sender as! UIView
+            while !cell.isKindOfClass(ThreadCell)
+            {
+                cell = cell.superview!
+            }
+            let selectedThread = cell as! ThreadCell
+            let vc = segue.destinationViewController as! CommentsVC
+            vc.thread = selectedThread.thread
+        }
+        
     }
+    
+    // MARK: IBActions
     
     // MARK: UITableViewDataSource protocol
     

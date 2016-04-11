@@ -40,6 +40,46 @@ class BlinksCommentsSDK {
         }
     }
     
+    func findComments(thread: Thread,
+                      parent: Comment? = nil,
+                      handler:(comments: [Comment]?) -> Void)
+    {
+        guard let id = thread.id else
+        {
+            handler(comments: nil)
+            return
+        }
+        
+        let URLString = "\(BlinksSDK.baseURL())/comments"
+        let arguments = [
+            "thread": id,
+            "parent": parent?.id ?? "none"
+        ]
+        let request = Alamofire.request(.GET,
+                                        URLString,
+                                        parameters: arguments,
+                                        encoding: .URL,
+                                        headers: nil)
+        request.responseJSON { (response) -> Void in
+            
+            if let result = response.result.value as! [[String: AnyObject]]?
+                where response.response?.statusCode == 200
+            {
+                var comments = [Comment]()
+                for item in result {
+                    if let comment = Comment.deserialize(item) {
+                        comments.append(comment)
+                    }
+                }
+                handler(comments: comments)
+            } else {
+                handler(comments: nil)
+            }
+        }
+        
+    }
+
+    
     func createThread(thread: Thread, handler:(success: Bool) -> Void )
     {
         let URLString = "\(BlinksSDK.baseURL())/threads"
@@ -59,5 +99,7 @@ class BlinksCommentsSDK {
             }
         }
     }
+    
+    
     
 }

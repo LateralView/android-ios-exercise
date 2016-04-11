@@ -1,14 +1,14 @@
 //
-//  ThreadCell.swift
+//  CommentCell.swift
 //  blinks
 //
-//  Created by Leandro Tami on 4/6/16.
+//  Created by Leandro Tami on 4/11/16.
 //  Copyright © 2016 Lateral View. All rights reserved.
 //
 
 import UIKit
 
-class ThreadCell: UITableViewCell
+class CommentCell: UITableViewCell
 {
     @IBOutlet var title                 : UILabel!
     @IBOutlet weak var userImage        : UIImageView!
@@ -16,13 +16,13 @@ class ThreadCell: UITableViewCell
     @IBOutlet weak var commentCount     : UILabel!
     @IBOutlet weak var commentText      : UILabel!
     
-    var thread: Thread!
+    var comment: Comment!
     {
         didSet
         {
-            self.title.text = thread.title
-            self.userName.text = thread.username
-            self.commentCount?.text = "\(thread.commentCount)"
+            self.commentText.text = comment.text
+            self.userName.text = comment.username
+            self.commentCount?.text = "\(comment.replyCount)"
         }
     }
     

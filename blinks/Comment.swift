@@ -11,16 +11,18 @@ import Foundation
 class Comment
 {
     
-    let id          : String
+    var id          : String?
     let threadId    : String
     let username    : String
     let text        : String
     var parentId    : String?
-    var createdAt   : String?
+    var createdAt   : NSDate?
+    var replyCount  : Int       = 0
     
-    init(id: String, threadId: String, username: String, text:String)
+    init(threadId: String,
+         username: String,
+         text:String)
     {
-        self.id = id
         self.threadId = threadId
         self.username = username
         self.text = text
