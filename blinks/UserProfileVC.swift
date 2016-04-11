@@ -28,7 +28,7 @@ class UserProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     {
         didSet
         {
-            self.loadData()
+            self.loadContent()
         }
     }
     
@@ -38,9 +38,28 @@ class UserProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.loadUserData()
+        self.loadContent()
     }
     
-    private func loadData()
+    private func loadUserData()
+    {
+        self.userName.text = ""
+        self.userPosts.text = ""
+        self.userComments.text = ""
+        
+        BlinksSDK.instance.users.find(self.username) { (users) in
+            
+            if let user = users?.first
+            {
+                self.userName.text = user.username
+                self.userPosts.text = "\(user.postCount) posts"
+                self.userComments.text = "\(user.commentCount) comments"
+            }
+        }
+    }
+    
+    private func loadContent()
     {
         self.comments = [Comment]()
         self.threads = [Thread]()

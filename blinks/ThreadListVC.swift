@@ -49,9 +49,20 @@ class ThreadListVC: UITableViewController
             {
                 cell = cell.superview!
             }
-            let selectedThread = cell as! ThreadCell
+            let senderCell = cell as! ThreadCell
             let vc = segue.destinationViewController as! CommentsVC
-            vc.thread = selectedThread.thread
+            vc.thread = senderCell.thread
+        }
+        else if segue.identifier == "toUserProfile"
+        {
+            var cell = sender as! UIView
+            while !cell.isKindOfClass(ThreadCell)
+            {
+                cell = cell.superview!
+            }
+            let senderCell = cell as! ThreadCell
+            let vc = segue.destinationViewController as! UserProfileVC
+            vc.username = senderCell.thread.username
         }
         
     }
