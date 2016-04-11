@@ -40,18 +40,18 @@ class BlinksCommentsSDK {
         }
     }
     
-    func findComments(thread: Thread,
+    func findComments(thread: Thread? = nil,
                       parent: Comment? = nil,
+                      username: String? = nil,
                       handler:(comments: [Comment]?) -> Void)
     {
-        guard let id = thread.id else
-        {
-            handler(comments: nil)
-            return
+        let URLString = "\(BlinksSDK.baseURL())/comments"
+        let arguments = [String: String]()
+        
+        if let uThread = thread {
+            arguments.append
         }
         
-        let URLString = "\(BlinksSDK.baseURL())/comments"
-        let arguments = [
             "thread": id,
             "parent": parent?.id ?? "none"
         ]

@@ -14,7 +14,8 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet var sectionHeader: UIView!
     
     var thread      : Thread!
-    var comments    = [Comment]()
+    
+    private var comments    = [Comment]()
     
     override func viewDidLoad()
     {
